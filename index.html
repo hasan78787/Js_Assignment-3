@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Custom Css link -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <!-- Prime Number Section -->
+    <section id="prime_Number" class="bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="prime_number">
+              <h1>1. Check Prime Number</h1>             
+              <input type="number" class="form-control text-center input_custom" id="Input" placeholder="Please enter the number">
+                <button type="button" class="btn btn-default button_custom" onclick="Click()">Show</button>
+              <h2 id="Output"></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Factorial Number Section -->
+    <section id="factorial_Number" class="bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="prime_number">
+              <h1>2. Check Factorial Number</h1>             
+              <input type="number" class="form-control text-center input_custom" id="finput" placeholder="Please enter the number">
+                <button type="button" class="btn btn-default button_custom" onclick="Flick()">Show</button>
+              <h2 id="futput"></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Factorial Number Section -->
+    <section id="factorial_Number" class="bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="prime_number">
+              <h1>3. Check Fibonacci Number</h1>             
+              <input type="number" class="form-control text-center input_custom" id="fibinput" placeholder="Please enter the number">
+                <button type="button" class="btn btn-default button_custom" onclick="Filick()">Show</button>
+              <h2 id="fibutput"></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+      function Click(){
+        var r=document.getElementById("Input").value;
+        var a=0;
+        for(var i=2;i<r;i++){
+          if(r%i==0){
+            a=i;
+          }
+        }
+          if(a==0){
+            document.getElementById("Output").innerHTML="Prime";
+          }
+          else{
+            document.getElementById("Output").innerHTML="Not Prime";
+          }
+      }
+
+
+      function Flick(){
+        var f=document.getElementById("finput").value;
+        var r=f;
+        for(var i=1;i<f;i++){
+          r=r*i;
+        }
+        document.getElementById("futput").innerHTML=r;
+      }
+
+
+      function Filick(){
+        var fib=document.getElementById("fibinput").value;
+        var b=0;
+        var c=1;
+        var d=1;
+        for(var i = 2; i <= fib; i++) {
+            d = b + c;
+            b = c;
+            c = d;
+         }
+         document.getElementById("fibutput").innerHTML=d;
+      }
+    </script>
+  </body>
+</html>
